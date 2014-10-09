@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="MultiTenantaSDLCSaaSModel">
+				<alt abstract="true" mandatory="true" name="CreateTrackablePackage">
+					<and abstract="true" mandatory="true" name="TrackEBItem">
+						<feature mandatory="true" name="Sprint"/>
+					</and>
+					<and abstract="true" mandatory="true" name="TrackGItem">
+						<feature mandatory="true" name="Project"/>
+					</and>
+					<and abstract="true" mandatory="true" name="TrackKBItem">
+						<feature mandatory="true" name="Board"/>
+					</and>
+				</alt>
+				<alt abstract="true" mandatory="true" name="CreateOrUpdateItem">
+					<and abstract="true" mandatory="true" name="EBItem">
+						<feature mandatory="true" name="Story"/>
+					</and>
+					<and abstract="true" mandatory="true" name="GItem">
+						<feature mandatory="true" name="Task"/>
+					</and>
+					<and abstract="true" mandatory="true" name="KBItem">
+						<feature mandatory="true" name="TaskCard"/>
+					</and>
+				</alt>
+				<alt abstract="true" mandatory="true" name="TrackProgess">
+					<and abstract="true" mandatory="true" name="EBProgress">
+						<feature mandatory="true" name="TeamVelocity"/>
+						<feature mandatory="true" name="PointsCompleted"/>
+						<feature mandatory="true" name="SprintComplete"/>
+					</and>
+					<and abstract="true" mandatory="true" name="GProgress">
+						<feature mandatory="true" name="PercentComplete"/>
+						<feature mandatory="true" name="FinishDate"/>
+					</and>
+					<and abstract="true" mandatory="true" name="KBProgress">
+						<feature mandatory="true" name="BoardColumn"/>
+					</and>
+				</alt>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
