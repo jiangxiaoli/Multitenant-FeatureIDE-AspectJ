@@ -1,4 +1,4 @@
 
-public aspect SprintComplete {
+public aspect LinkKB {
 	// TODO Auto-generated aspect
 }

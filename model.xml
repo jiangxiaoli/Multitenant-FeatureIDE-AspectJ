@@ -2,7 +2,7 @@
 	<featureModel chosenLayoutAlgorithm="1">
 		<struct>
 			<and abstract="true" mandatory="true" name="MultiTenantaSDLCSaaSModel">
-				<alt abstract="true" mandatory="true" name="CreateTrackablePackage">
+				<or abstract="true" mandatory="true" name="CreateOrUpdateTrackablePackage">
 					<and abstract="true" mandatory="true" name="TrackEBItem">
 						<feature mandatory="true" name="Sprint"/>
 					</and>
@@ -12,8 +12,8 @@
 					<and abstract="true" mandatory="true" name="TrackKBItem">
 						<feature mandatory="true" name="Board"/>
 					</and>
-				</alt>
-				<alt abstract="true" mandatory="true" name="CreateOrUpdateItem">
+				</or>
+				<or abstract="true" mandatory="true" name="CreateOrUpdateItem">
 					<and abstract="true" mandatory="true" name="EBItem">
 						<feature mandatory="true" name="Story"/>
 					</and>
@@ -23,21 +23,26 @@
 					<and abstract="true" mandatory="true" name="KBItem">
 						<feature mandatory="true" name="TaskCard"/>
 					</and>
-				</alt>
-				<alt abstract="true" mandatory="true" name="TrackProgess">
+				</or>
+				<or abstract="true" mandatory="true" name="LinkActivity">
+					<feature mandatory="true" name="LinkEB"/>
+					<feature mandatory="true" name="LinkG"/>
+					<feature mandatory="true" name="LinkKB"/>
+				</or>
+				<or abstract="true" mandatory="true" name="TrackProgess">
 					<and abstract="true" mandatory="true" name="EBProgress">
-						<feature mandatory="true" name="TeamVelocity"/>
-						<feature mandatory="true" name="PointsCompleted"/>
-						<feature mandatory="true" name="SprintComplete"/>
+						<feature mandatory="true" name="EBSrpint"/>
+						<feature mandatory="true" name="EBStory"/>
 					</and>
 					<and abstract="true" mandatory="true" name="GProgress">
-						<feature mandatory="true" name="PercentComplete"/>
-						<feature mandatory="true" name="FinishDate"/>
+						<feature mandatory="true" name="GProject"/>
+						<feature mandatory="true" name="GTask"/>
 					</and>
 					<and abstract="true" mandatory="true" name="KBProgress">
-						<feature mandatory="true" name="BoardColumn"/>
+						<feature mandatory="true" name="KBBoard"/>
+						<feature mandatory="true" name="KBTaskCard"/>
 					</and>
-				</alt>
+				</or>
 			</and>
 		</struct>
 		<constraints/>

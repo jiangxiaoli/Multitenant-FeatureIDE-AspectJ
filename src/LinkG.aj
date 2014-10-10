@@ -1,4 +1,4 @@
 
-public aspect BoardColumn {
+public aspect LinkG {
 	// TODO Auto-generated aspect
 }

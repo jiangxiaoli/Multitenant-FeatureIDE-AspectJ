@@ -1,4 +1,4 @@
 
-public aspect FinishDate {
+public aspect KBTaskCard {
 	// TODO Auto-generated aspect
 }

@@ -1,4 +1,4 @@
 
-public aspect PointsCompleted {
+public aspect KBBoard {
 	// TODO Auto-generated aspect
 }

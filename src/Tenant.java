@@ -1,56 +1,47 @@
+import java.util.HashMap;
+
 import tenantClasses.*;
 
 public class Tenant {
 	public GeneralPackage generalPackage; //each tenant has only one package
-	public GeneralItem generalItem;//each tenant has only one item
+	public HashMap<Integer,GeneralItem> generalItems; //store items with id in Map
 	
-
-	public void print()
-	{
-		System.out.println("");
+	public Tenant(){
+		generalItems = new HashMap();
 	}
 	
-	/*public void setPackage(GeneralPackage p){
-		this.generalPackage = p;
-	}
+	public void createTackablePackage(){}
 	
-	public void setItem(GeneralItem i){
-		this.generalItem = i;
-	}*/
+	public void createItem(){}
 	
-	public void createTackablePackage(){
-		//System.out.println("create package succeed!");
-		//System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		System.out.println();
-	}
+	public void updatePackage(){}
 	
-	public void createOrUpdateItem(){
-		//System.out.println("create item succeed!");	
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		System.out.println();
-	}
+	public void updateItem(){}
 	
-	public void updatePackage(){
-		//System.out.println("update package succeed!");	
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		System.out.println();
-		
-	}
+	public void linkItem(){}
 	
 	public void trackProgress(){}
 	
 	public static void main(String[] args) 
 	{
-		//new Main().print();
+		
 		
 		Tenant tenant = new Tenant();
 		
 	    tenant.createTackablePackage();
 		
+		tenant.updatePackage();
 		
-		//tenant.createOrUpdateItem();
+		tenant.createItem();
+		tenant.createItem();
+		//tenant.createItem();
 		
-		//tenant.updatePackage();
+		tenant.updateItem();
+		
+		tenant.linkItem();
+		tenant.linkItem();
+		
+		tenant.trackProgress();
 		
 		
 		

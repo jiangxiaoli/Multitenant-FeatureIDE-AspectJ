@@ -1,4 +1,4 @@
 
-public aspect TrackProcess {
+public aspect GTask {
 	// TODO Auto-generated aspect
 }

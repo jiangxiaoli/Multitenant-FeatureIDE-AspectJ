@@ -1,4 +1,4 @@
 
-public aspect AddTask {
+public aspect GProject {
 	// TODO Auto-generated aspect
 }
